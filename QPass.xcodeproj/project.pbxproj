@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0752F77D2AE56E3600879D24 /* GrowingButotn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752F77C2AE56E3600879D24 /* GrowingButotn.swift */; };
+		0752F77F2AE56F1900879D24 /* SuccessScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752F77E2AE56F1900879D24 /* SuccessScreen.swift */; };
+		0752F7822AE5718200879D24 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0752F7812AE5718200879D24 /* ConfettiSwiftUI */; };
 		076E33F12AE4B127003F7A4D /* InputPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E33F02AE4B127003F7A4D /* InputPage.swift */; };
 		07E2627A2AE4877A002660E6 /* QPassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E262792AE4877A002660E6 /* QPassApp.swift */; };
 		07E2627C2AE4877A002660E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2627B2AE4877A002660E6 /* ContentView.swift */; };
@@ -16,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0752F77C2AE56E3600879D24 /* GrowingButotn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingButotn.swift; sourceTree = "<group>"; };
+		0752F77E2AE56F1900879D24 /* SuccessScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessScreen.swift; sourceTree = "<group>"; };
 		076E33F02AE4B127003F7A4D /* InputPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPage.swift; sourceTree = "<group>"; };
 		07E262762AE4877A002660E6 /* QPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E262792AE4877A002660E6 /* QPassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QPassApp.swift; sourceTree = "<group>"; };
@@ -29,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0752F7822AE5718200879D24 /* ConfettiSwiftUI in Frameworks */,
 				07E262892AE48A2F002660E6 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +66,8 @@
 				07E2627D2AE4877C002660E6 /* Assets.xcassets */,
 				07E2627F2AE4877C002660E6 /* Preview Content */,
 				076E33F02AE4B127003F7A4D /* InputPage.swift */,
+				0752F77C2AE56E3600879D24 /* GrowingButotn.swift */,
+				0752F77E2AE56F1900879D24 /* SuccessScreen.swift */,
 			);
 			path = QPass;
 			sourceTree = "<group>";
@@ -90,6 +98,7 @@
 			name = QPass;
 			packageProductDependencies = (
 				07E262882AE48A2F002660E6 /* CodeScanner */,
+				0752F7812AE5718200879D24 /* ConfettiSwiftUI */,
 			);
 			productName = QPass;
 			productReference = 07E262762AE4877A002660E6 /* QPass.app */;
@@ -121,6 +130,7 @@
 			mainGroup = 07E2626D2AE4877A002660E6;
 			packageReferences = (
 				07E262872AE48A2F002660E6 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				0752F7802AE5718200879D24 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = 07E262772AE4877A002660E6 /* Products */;
 			projectDirPath = "";
@@ -148,9 +158,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0752F77F2AE56F1900879D24 /* SuccessScreen.swift in Sources */,
 				07E2627C2AE4877A002660E6 /* ContentView.swift in Sources */,
 				076E33F12AE4B127003F7A4D /* InputPage.swift in Sources */,
 				07E2627A2AE4877A002660E6 /* QPassApp.swift in Sources */,
+				0752F77D2AE56E3600879D24 /* GrowingButotn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +365,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0752F7802AE5718200879D24 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		07E262872AE48A2F002660E6 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
@@ -364,6 +384,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0752F7812AE5718200879D24 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0752F7802AE5718200879D24 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
 		07E262882AE48A2F002660E6 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 07E262872AE48A2F002660E6 /* XCRemoteSwiftPackageReference "CodeScanner" */;

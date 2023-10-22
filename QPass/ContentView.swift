@@ -13,11 +13,23 @@ struct ContentView: View {
     @State private var timestamp: String = ""
     @State private var name: String = ""
     @State private var submit = false
+    
+    
+    @State private var showSuccessScreen = false
 
     var body: some View {
         NavigationView{
             VStack(spacing: 10) {
-                if submit == true {
+                
+                if submit == true && showSuccessScreen == true {
+                    SuccessScreen()
+                        .transition(.scale)
+                        .onAppear() {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                                submit = false
+                            }
+                        }
+                } else if submit == true {
                     Text(scannedCode!)
                     TextField("Time Stamp", text: $timestamp).multilineTextAlignment(.center)
                     TextField("Name", text: $name).multilineTextAlignment(.center)
@@ -26,8 +38,8 @@ struct ContentView: View {
                         scannedCode = nil
                         timestamp = ""
                         name = ""
-                        submit = false
-                    }
+                        showSuccessScreen = true
+                    }.buttonStyle(GrowingButton())
                 } else {
                     // Navigate to InputPage with scannedCode as parameter
                     //                NavigationView {
@@ -40,7 +52,7 @@ struct ContentView: View {
 
                     Button("Scan Code") {
                         isPresentingScanner = true
-                    }
+                    }.buttonStyle(GrowingButton())
 
                     Text("Scan a QR code to begin")
                     

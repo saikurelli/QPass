@@ -15,6 +15,7 @@ struct ContentView: View {
     @State private var submit = false
     
     
+    @State private var relevantNotificationTime = Date.now
     @State private var showSuccessScreen = false
 
     var body: some View {
@@ -30,9 +31,11 @@ struct ContentView: View {
                             }
                         }
                 } else if submit == true {
-                    Text(scannedCode!)
-                    TextField("Time Stamp", text: $timestamp).multilineTextAlignment(.center)
-                    TextField("Name", text: $name).multilineTextAlignment(.center)
+                    Text("QR Data: \(scannedCode!)")
+                    Text("Notification Time")
+                    DatePicker("", selection: $relevantNotificationTime, in: Date.now...).datePickerStyle(.compact).position(x:120, y: 50).frame(width: 400, height: 100).offset(y: -25)
+                   
+                    TextField("Pass Name", text: $name).multilineTextAlignment(.center).offset(y: -25)
                     Button("Submit"){
                         // Do something with API
                         scannedCode = nil

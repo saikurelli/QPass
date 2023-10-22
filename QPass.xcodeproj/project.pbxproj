@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		076E33F12AE4B127003F7A4D /* InputPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E33F02AE4B127003F7A4D /* InputPage.swift */; };
 		07E2627A2AE4877A002660E6 /* QPassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E262792AE4877A002660E6 /* QPassApp.swift */; };
 		07E2627C2AE4877A002660E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E2627B2AE4877A002660E6 /* ContentView.swift */; };
 		07E2627E2AE4877C002660E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E2627D2AE4877C002660E6 /* Assets.xcassets */; };
 		07E262812AE4877C002660E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E262802AE4877C002660E6 /* Preview Assets.xcassets */; };
+		07E262892AE48A2F002660E6 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 07E262882AE48A2F002660E6 /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		076E33F02AE4B127003F7A4D /* InputPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPage.swift; sourceTree = "<group>"; };
 		07E262762AE4877A002660E6 /* QPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E262792AE4877A002660E6 /* QPassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QPassApp.swift; sourceTree = "<group>"; };
 		07E2627B2AE4877A002660E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E262892AE48A2F002660E6 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +59,7 @@
 				07E2627B2AE4877A002660E6 /* ContentView.swift */,
 				07E2627D2AE4877C002660E6 /* Assets.xcassets */,
 				07E2627F2AE4877C002660E6 /* Preview Content */,
+				076E33F02AE4B127003F7A4D /* InputPage.swift */,
 			);
 			path = QPass;
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = QPass;
+			packageProductDependencies = (
+				07E262882AE48A2F002660E6 /* CodeScanner */,
+			);
 			productName = QPass;
 			productReference = 07E262762AE4877A002660E6 /* QPass.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 07E2626D2AE4877A002660E6;
+			packageReferences = (
+				07E262872AE48A2F002660E6 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 07E262772AE4877A002660E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E2627C2AE4877A002660E6 /* ContentView.swift in Sources */,
+				076E33F12AE4B127003F7A4D /* InputPage.swift in Sources */,
 				07E2627A2AE4877A002660E6 /* QPassApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		07E262872AE48A2F002660E6 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		07E262882AE48A2F002660E6 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07E262872AE48A2F002660E6 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07E2626E2AE4877A002660E6 /* Project object */;
 }

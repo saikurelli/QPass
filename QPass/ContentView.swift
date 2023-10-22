@@ -13,14 +13,14 @@ struct ContentView: View {
     @State private var timestamp: String = ""
     @State private var name: String = ""
     @State private var submit = false
-    
+
     var body: some View {
         NavigationView{
             VStack(spacing: 10) {
                 if submit == true {
                     Text(scannedCode!)
-                    TextField("Time Stamp", text: $timestamp)
-                    TextField("Name", text: $name)
+                    TextField("Time Stamp", text: $timestamp).multilineTextAlignment(.center)
+                    TextField("Name", text: $name).multilineTextAlignment(.center)
                     Button("Submit"){
                         // Do something with API
                         scannedCode = nil
@@ -35,13 +35,13 @@ struct ContentView: View {
                     //                        Text("Input Page")
                     //                    }
                     //                }
-                    
+
                     // show fullscreencover with InputPage, passing in scannedCode as parameter, and automatically load InputPage
-                    
+
                     Button("Scan Code") {
                         isPresentingScanner = true
                     }
-                    
+
                     Text("Scan a QR code to begin")
                     
                 }
@@ -56,7 +56,6 @@ struct ContentView: View {
                 }
             }
         }
-        
     }
 }
 

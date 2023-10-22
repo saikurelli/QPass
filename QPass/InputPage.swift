@@ -9,7 +9,6 @@ import SwiftUI
 struct InputPage: View {
     // takes in parameter code from ContentView
     @Binding var code: String?
-
     var body: some View {
         VStack {
             Text("Input Page")

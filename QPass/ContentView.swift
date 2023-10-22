@@ -34,7 +34,7 @@ struct ContentView: View {
                         }
                     }
             } else if submit == true {
-                Text("QR Data: \(scannedCode!)")
+                Text("QR Data: \(scannedCode!)").offset(y:-50)
                 Text("Notification Time")
                 DatePicker("", selection: $relevantNotificationTime, in: Date.now...).datePickerStyle(.compact).position(x:120, y: 50).frame(width: 400, height: 100).offset(y: -25)
                 
@@ -54,7 +54,7 @@ struct ContentView: View {
                 Text("Scan a QR code to begin")
                 
             }
-            Spacer()
+            Spacer(minLength: 120)
         }
         .sheet(isPresented: $isPresentingScanner) {
             CodeScannerView(codeTypes: [.qr]) { response in

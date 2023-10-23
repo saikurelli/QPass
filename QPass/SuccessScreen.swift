@@ -28,24 +28,24 @@ struct SuccessScreen: View {
     var body: some View {
         ZStack {
             Color.green
-            Text("Success!")
-                .font(.largeTitle)
-                .foregroundColor(.white)
-                .onAppear {
-                    counter += 1
-                }.confettiCannon(counter: $counter)
-            VStack{
-                Spacer().frame(height: 250)
+            VStack {
+                Spacer(minLength: 50)
+                Text("Success!")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .onAppear {
+                        counter += 1
+                    }.confettiCannon(counter: $counter)
+                Spacer(minLength: 50)
+                
                 HStack{
                     Spacer()
                     AddPassButton().frame(width: 150, height: 55)
                     Spacer()
                 }
+                Spacer().frame(height: 250)
             }
-            
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .edgesIgnoringSafeArea(.all)
     }
 }
 

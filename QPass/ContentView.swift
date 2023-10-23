@@ -20,13 +20,14 @@ struct ContentView: View {
     private let lightGreen = Color(red: 0, green: 1.0, blue: 0, opacity: 0.5)
     var body: some View {
         
-        Rectangle().background(lightGreen).foregroundColor(.green)
+        Rectangle().background(lightGreen).foregroundColor(.green).frame(minHeight: 200)
         
-        Image("QPass").resizable().aspectRatio(contentMode: .fill).border(.blue.gradient, width: 3).cornerRadius(10).offset(y:-70).padding([], 0).background()
+        Image("QPass").resizable().aspectRatio(contentMode: .fill).border(.blue.gradient, width: 5).cornerRadius(10).offset(y:-70).padding([], 0).background(.purple)
         VStack {
             // tried using NavigationLink, switched to using delegate like interface
             if submit == true && showSuccessScreen == true {
                 SuccessScreen()
+                    .offset(y: -70)
                     .transition(.scale)
                     .onAppear() {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
